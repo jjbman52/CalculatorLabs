@@ -4,7 +4,7 @@ package com.mycompany.firstmaven.calculatorlabs.model;
  *
  * @author jordanrehbein
  */
-public class CalculateArea {
+public class CalculatorService {
     
     public final double getRectangleArea(String length, String width){
         double l = Double.parseDouble(length);
@@ -17,9 +17,8 @@ public class CalculateArea {
     
     public final double getCircleArea(String radius){
         double r = Double.parseDouble(radius);
-        r = r * r;
         
-        double area = r * 3.14;
+        double area = Math.pow(r,2) * 3.14;
         
         return area;
     }

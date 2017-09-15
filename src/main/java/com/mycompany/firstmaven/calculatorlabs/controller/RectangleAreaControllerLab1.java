@@ -5,7 +5,7 @@
  */
 package com.mycompany.firstmaven.calculatorlabs.controller;
 
-import com.mycompany.firstmaven.calculatorlabs.model.CalculateArea;
+import com.mycompany.firstmaven.calculatorlabs.model.CalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -39,7 +39,7 @@ public class RectangleAreaControllerLab1 extends HttpServlet {
         String width = request.getParameter("width").trim();
         String length = request.getParameter("length").trim();
         
-        CalculateArea ca = new CalculateArea();
+        CalculatorService ca = new CalculatorService();
         request.setAttribute("area", ca.getRectangleArea(length, width));
         
         RequestDispatcher view =

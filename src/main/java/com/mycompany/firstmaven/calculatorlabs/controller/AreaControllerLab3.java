@@ -5,7 +5,7 @@
  */
 package com.mycompany.firstmaven.calculatorlabs.controller;
 
-import com.mycompany.firstmaven.calculatorlabs.model.CalculateArea;
+import com.mycompany.firstmaven.calculatorlabs.model.CalculatorService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -36,7 +36,7 @@ public class AreaControllerLab3 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String calcType = request.getParameter("clacType");
-            CalculateArea ca = new CalculateArea();
+            CalculatorService ca = new CalculatorService();
             
             if(calcType.equals("rectangle")) {
                 String width = request.getParameter("width").trim();
